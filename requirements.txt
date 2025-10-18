@@ -6,5 +6,4 @@ matplotlib
 streamlit
 fitz
 joblib
-pdf2image
-Pillow
+PyMuPDF
