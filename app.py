@@ -3,10 +3,13 @@ import pickle
 import re
 import numpy as np
 
-# Load model and vectorizer
-model = pickle.load('resume_classifier_model.pkl')
-vectorizer = pickle.load('tfidf_vectorizer.pkl')
+# Load model
+with open('resume_classifier_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
+# Load vectorizer
+with open('tfidf_vectorizer.pkl', 'rb') as f:
+    vectorizer = pickle.load(f)
 # Optional: Label encoder mapping (reverse map)
 category_map = {
     0: 'Data Science',
