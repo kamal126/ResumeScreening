@@ -1,15 +1,15 @@
 import streamlit as st
 import pickle
 import re
+import joblib
 import numpy as np
 
 # Load model
-with open('resume_classifier_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+model = joblib.load('resume_classifier_model.pkl')
 
 # Load vectorizer
-with open('tfidf_vectorizer.pkl', 'rb') as f:
-    vectorizer = pickle.load(f)
+vectorizer = joblib.load('tfidf_vectorizer.pkl')
+
 # Optional: Label encoder mapping (reverse map)
 category_map = {
     0: 'Data Science',
