@@ -4,8 +4,8 @@ import re
 import numpy as np
 
 # Load model and vectorizer
-model = pickle.load(open('resume_classifier_model.pkl', 'rb'))
-vectorizer = pickle.load(open('tfidf_vectorizer.pkl', 'rb'))
+model = pickle.load('resume_classifier_model.pkl')
+vectorizer = pickle.load('tfidf_vectorizer.pkl')
 
 # Optional: Label encoder mapping (reverse map)
 category_map = {
